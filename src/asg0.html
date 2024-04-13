@@ -1,0 +1,74 @@
+<!--
+    Author: Trisha Moorkoth
+    Date: 4/12/24
+    Email: tmoorkot@ucsc.edu
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Draw a blue rectangle (canvas version)</title>
+    </head>
+
+    <body onload="main()">
+        <canvas id="example" width="400" height="400">
+            Please use a browser that supports "canvas"
+        </canvas>
+        <script src="asg0.js"></script>
+        <script src="../lib/cuon-matrix-cse160.js"></script>
+
+        <br><br>
+        <!-- v1 coordinate input-->
+        <label for="name">V1: x </label>
+        <input type="number" id="v1_x" name="name" 
+        required minlength="4" maxlength="8" size="10"/>
+
+        <label for="name">y </label>
+        <input type="number" id="v1_y" name="name" 
+        required minlength="4" maxlength="8" size="10"/>
+
+        <br><br>
+        
+        <!-- v2 coordinate input-->
+        <label for="name">V2: x </label>
+        <input type="number" id="v2_x" name="name" 
+        required minlength="4" maxlength="8" size="10"/>
+
+        <label for="name">y </label>
+        <input type="number" id="v2_y" name="name" 
+        required minlength="4" maxlength="8" size="10"/>
+
+        <br><br>
+
+        <!-- draw vector button -->
+        <input type="button" value="Draw" onclick="handleDrawEvent()"></input>
+
+        <br><br>
+
+        <!-- dropdown op selector-->
+        <label for="op-select">Operation: </label>
+
+        <select name="operations" id="op-select">
+            <option value="">--Please choose an option--</option>
+            <option value="add">Add</option>
+            <option value="sub">Subtract</option>
+            <option value="mul">Multiply</option>
+            <option value="div">Divide</option>
+            <option value="mag">Magnitude</option>
+            <option value="norm">Normalize</option>
+            <option value="angle">Angle between</option>
+            <option value="area">Area</option>
+        </select>
+
+        <!-- scalar input-->
+        <label for="scalar">Scalar: </label>
+        <input type="number" id="s" name="name" 
+        required minlength="4" maxlength="8" size="10"/>
+
+        <br><br>
+
+        <!-- draw operations button -->
+        <input type="button" value="Draw" onclick="handleDrawOperationEvent()"></input>
+    </body>
+</html>
