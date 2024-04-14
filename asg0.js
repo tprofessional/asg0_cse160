@@ -97,7 +97,7 @@ function handleDrawOperationEvent() {
     }
     else if (op === 'div' || op === 'mul') {
         // read scalar
-        var s = document.getElementById('s').value;
+        var s = document.getElementById('scalar').value;
         // console.log(s);
         // check div or mul
         if (op === 'div') {
